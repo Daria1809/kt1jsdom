@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+
+    <script>
+    let array = [];
+    for(let i =0; i<5; i++){
+      array[i]=[];
+      for(let j=0; j<6; j++){
+        array[i][j]=Math.floor(Math.random()*100);
+      }
+    }
+    console.log(array)
+    array.forEach(function(item){
+      let row = document.createElement('tr')
+      row.innerHTML = `
+      <td>${item[0]}</td>
+      <td>${item[1]}</td>
+      <td>${item[2]}</td>
+      <td>${item[3]}</td>
+      <td>${item[4]}</td>
+      <td>${item[5]}</td>
+      `
+      document.querySelector('table').append(row)
+    })
+    </script>
+</body>
+</html>
+
